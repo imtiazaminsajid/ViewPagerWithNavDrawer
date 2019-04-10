@@ -52,6 +52,7 @@ public class MainActivity extends AppCompatActivity
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
         adapter.addFragment(FragmentOne.getInstance(),"Imtiaz");
         adapter.addFragment(FragmentTwo.getInstance(), "Amin");
+        adapter.addFragment(FragmentFour.getInstance(), "Sajid");
         viewPager.setAdapter(adapter);
     }
 

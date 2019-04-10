@@ -7,12 +7,6 @@
     tools:context=".FragmentOne">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:id="@+id/txt_display"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Imtiaz Amin"
-        />
     <ImageView
         android:layout_width="350dp"
         android:layout_height="200dp"
