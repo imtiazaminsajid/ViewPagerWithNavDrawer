@@ -3,6 +3,7 @@ package com.example.beatniktechnology.nav;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.view.View;
 import android.support.design.widget.NavigationView;
@@ -19,6 +20,7 @@ public class MainActivity extends AppCompatActivity
 
     private ViewPager viewPager;
     private ViewPagerAdapter adapter;
+    private TabLayout tabLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,8 +41,17 @@ public class MainActivity extends AppCompatActivity
         //viewpager init
         viewPager =  findViewById(R.id.viewPager);
 
-        adapter = new ViewPagerAdapter(getSupportFragmentManager());
+        //adapter = new ViewPagerAdapter(getSupportFragmentManager());
 
+        //viewPager.setAdapter(adapter);
+
+        //tabLayout
+        tabLayout = findViewById(R.id.tab_layout);
+        tabLayout.setupWithViewPager(viewPager);
+
+        ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
+        adapter.addFragment(FragmentOne.getInstance(),"Imtiaz");
+        adapter.addFragment(FragmentTwo.getInstance(), "Amin");
         viewPager.setAdapter(adapter);
     }
 

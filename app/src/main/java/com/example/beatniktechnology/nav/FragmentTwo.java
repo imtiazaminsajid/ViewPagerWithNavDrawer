@@ -13,6 +13,8 @@ import android.view.ViewGroup;
  */
 public class FragmentTwo extends Fragment {
 
+    static FragmentTwo instance;
+
 
     public FragmentTwo() {
         // Required empty public constructor
@@ -24,6 +26,12 @@ public class FragmentTwo extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_fragment_two, container, false);
+    }
+
+    public static FragmentTwo getInstance() {
+        if (instance == null)
+            instance = new FragmentTwo();
+        return instance;
     }
 
 }
