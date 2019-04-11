@@ -50,9 +50,13 @@ public class MainActivity extends AppCompatActivity
         tabLayout.setupWithViewPager(viewPager);
 
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
-        adapter.addFragment(FragmentOne.getInstance(),"Imtiaz");
-        adapter.addFragment(FragmentTwo.getInstance(), "Amin");
-        adapter.addFragment(FragmentFour.getInstance(), "Sajid");
+        adapter.addFragment(FragmentOne.getInstance(),"Bangladesh");
+        adapter.addFragment(FragmentTwo.getInstance(), "India");
+        adapter.addFragment(FragmentThree.getInstance(), "Nepal");
+        adapter.addFragment(FragmentFour.getInstance(), "Buthan");
+        adapter.addFragment(FragmentFive.getInstance(), "Srilanka");
+        adapter.addFragment(FragmentSix.getInstance(), "Pakistan");
+        adapter.addFragment(FragmentSeven.getInstance(), "Afganistan");
         viewPager.setAdapter(adapter);
     }
 
